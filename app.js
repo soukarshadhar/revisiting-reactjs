@@ -1,10 +1,13 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const root = document.getElementById('root');
 const twoList = React.createElement(React.Fragment, {},
   [
     React.createElement('ul', { id: 'list1'}, 
       [
         React.createElement('li', {}, 'First item'),
-        React.createElement('li', {}, 'Second item')
+        React.createElement('li', {}, 'Now using bundler')
       ]
     ),
     React.createElement('ul', { id: 'list2'}, 
