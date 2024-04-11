@@ -1,22 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const root = document.getElementById('root');
-const twoList = React.createElement(React.Fragment, {},
-  [
-    React.createElement('ul', { id: 'list1'}, 
-      [
-        React.createElement('li', {}, 'First item'),
-        React.createElement('li', {}, 'Now using bundler')
-      ]
-    ),
-    React.createElement('ul', { id: 'list2'}, 
-      [
-        React.createElement('li', {}, 'Third item'),
-        React.createElement('li', {}, 'Fourth item')
-      ]
-    )
-  ]);
+const Header = () => <h1>Grocery List</h1>
 
-const reactRoot = ReactDOM.createRoot(root);
-reactRoot.render(twoList);
+const RenderList = () => {
+  return (<>
+      <Header />
+      <ul id="list">
+        <li>Potato</li>
+        <li>Cabbage</li>
+        <li>Green Peas</li>
+        <li>Coriander</li>
+      </ul>
+    </>
+  );
+};
+
+const reactRoot = ReactDOM.createRoot(document.getElementById('root'));
+reactRoot.render(<RenderList />);
